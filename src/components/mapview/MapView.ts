@@ -28,13 +28,15 @@ export default defineComponent({
                 .setHTML(`
                     <h4>Aquí estoy</h4>
                     <p>Actualmente en La Florida</p>
-                `)
+                `);
 
             const myLocationMarker = new Mapboxgl.Marker()
                 .setLngLat( userLocation.value )
                 .setPopup( myLocationPopup )
                 .addTo( map );
 
+            //Todo establecer el mapa en vuex
+            
         }
 
         onMounted(() => {
