@@ -18,10 +18,23 @@ export default defineComponent({
             
             const map = new Mapboxgl.Map({
                 container: mapElement.value, // container ID
-                style: 'mapbox://styles/mapbox/streets-v11', // style URL
+                style: 'mapbox://styles/mapbox/light-v10', // style URL
                 center: userLocation.value,
                 zoom: 15 // starting zoom
             });
+
+            const myLocationPopup = new Mapboxgl.Popup()
+                .setLngLat( userLocation.value )
+                .setHTML(`
+                    <h4>Aquí estoy</h4>
+                    <p>Actualmente en La Florida</p>
+                `)
+
+            const myLocationMarker = new Mapboxgl.Marker()
+                .setLngLat( userLocation.value )
+                .setPopup( myLocationPopup )
+                .addTo( map );
+
         }
 
         onMounted(() => {
