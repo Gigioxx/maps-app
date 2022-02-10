@@ -6,7 +6,8 @@
             class="form-control"
             type="text"
             placeholder="Buscar ubicaciones..."
-        >
+            v-model="searchTerm"
+        />
 
         <SearchResults />
 
