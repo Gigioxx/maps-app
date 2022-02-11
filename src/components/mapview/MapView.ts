@@ -28,7 +28,6 @@ export default defineComponent({
                 .setLngLat( userLocation.value )
                 .setHTML(`
                     <h4>Aquí estoy</h4>
-                    <p>Actualmente en La Florida</p>
                 `);
 
             const myLocationMarker = new Mapboxgl.Marker()
@@ -48,7 +47,7 @@ export default defineComponent({
 
         watch( isUserLocationReady, ( newVal ) => {
             if ( userLocation.value ) initMap();
-        })
+        });
 
         return {
             isUserLocationReady,

@@ -37,6 +37,7 @@ export default defineComponent({
     padding: 10px;
     position: fixed;
     width: 300px;
+    z-index: 999;
 }
 
 strong {
