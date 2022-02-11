@@ -1,5 +1,7 @@
 # maps-app
 
+App website: https://maps-vue-ts.netlify.app/
+
 ## Project setup
 ```
 npm install
